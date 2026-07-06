@@ -256,4 +256,24 @@ a:hover { color: var(--accent); }
 .fact dd { margin: 0; font-weight: 500; text-align: right; }
 @media (max-width: 767px) { .about-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
 
+/* ============ Experience timeline ============ */
+.timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+.timeline::before {
+  content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px; width: 2px;
+  background: repeating-linear-gradient(180deg, var(--line) 0 8px, transparent 8px 13px);
+}
+.t-item { position: relative; padding: 0 0 2.4rem 2.2rem; }
+.t-item:last-child { padding-bottom: .5rem; }
+.t-item::before {
+  content: ""; position: absolute; left: 0; top: 6px; width: 12px; height: 12px;
+  border-radius: 50%; background: var(--paper); border: 3px solid var(--accent);
+}
+.t-current::before { border-color: var(--flag); }
+.t-date { font-family: var(--font-mono); font-size: .82rem; color: var(--muted); margin: 0 0 .2rem; }
+.t-role { font-size: 1.3rem; font-weight: 600; margin: 0 0 .1rem; }
+.t-org { font-weight: 500; color: var(--accent-ink); margin: 0 0 .7rem; }
+.t-points { margin: 0; padding-left: 1.1rem; }
+.t-points li { margin-bottom: .45rem; color: var(--muted); }
+.t-points li::marker { color: var(--accent); }
+
 /* ============ No-JS fallback (keep last) ============ */
