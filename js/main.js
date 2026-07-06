@@ -21,3 +21,33 @@ navLinks.addEventListener('click', (e) => {
     navToggle.setAttribute('aria-expanded', 'false');
   }
 });
+
+// ---- Footer year ----
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// ---- Scroll reveal ----
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+// ---- Scroll spy: highlight the nav link of the section in view ----
+const spyLinks = new Map(
+  [...document.querySelectorAll('.nav-link')].map((a) => [a.getAttribute('href').slice(1), a])
+);
+const spyObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const link = spyLinks.get(entry.target.id);
+    if (!link) return;
+    if (entry.isIntersecting) {
+      document.querySelectorAll('.nav-link.active').forEach((el) => el.classList.remove('active'));
+      link.classList.add('active');
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+document.querySelectorAll('main section[id]').forEach((s) => spyObserver.observe(s));

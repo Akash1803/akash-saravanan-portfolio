@@ -344,4 +344,20 @@ a:hover { color: var(--accent); }
 .edu-note { color: var(--muted); font-size: .95rem; margin: 0; }
 .certs { margin-top: 1.75rem; }
 
+/* ============ Contact & footer ============ */
+.contact-box {
+  border: 1px solid var(--line); border-radius: var(--r-l); background: var(--surface);
+  box-shadow: var(--shadow-1); padding: clamp(1.75rem, 4vw, 3rem); text-align: center;
+}
+.contact-lead { font-size: 1.15rem; max-width: 32rem; margin: 0 auto .5rem; }
+.contact-box .cta-row { justify-content: center; }
+.contact-alt { color: var(--muted); margin: 0; }
+.footer {
+  max-width: var(--w-max); margin: 0 auto; padding: 3rem 1.5rem 2rem;
+  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  color: var(--muted); font-size: .9rem;
+}
+.footer p { margin: 0; }
+.footer-mono { font-family: var(--font-mono); font-size: .8rem; }
+
 /* ============ No-JS fallback (keep last) ============ */
