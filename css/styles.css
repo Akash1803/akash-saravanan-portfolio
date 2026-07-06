@@ -117,4 +117,55 @@ a:hover { color: var(--accent); }
   .reveal { opacity: 1; translate: none; }
 }
 
+/* ============ Nav ============ */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--paper) 72%, transparent);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: var(--w-max); margin: 0 auto; padding: .7rem 1.5rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.brand {
+  display: flex; align-items: center; gap: .55rem; margin-right: auto;
+  font-family: var(--font-display); font-weight: 600; font-size: 1.1rem;
+  color: var(--ink); text-decoration: none;
+}
+.brand-mark { color: var(--accent); }
+.nav-links { display: flex; gap: .25rem; list-style: none; margin: 0; padding: 0; }
+.nav-link {
+  display: block; padding: .45rem .8rem; border-radius: var(--r-s);
+  font-size: .95rem; font-weight: 500; color: var(--muted); text-decoration: none;
+}
+.nav-link:hover { color: var(--ink); background: var(--accent-soft); }
+.nav-link.active { color: var(--accent-ink); background: var(--accent-soft); }
+.theme-toggle, .nav-toggle {
+  display: grid; place-items: center; width: 38px; height: 38px;
+  border: 1px solid var(--line); border-radius: var(--r-s);
+  background: var(--surface); color: var(--ink); cursor: pointer;
+}
+.theme-toggle:hover, .nav-toggle:hover { border-color: var(--accent); color: var(--accent-ink); }
+[data-theme="dark"] .icon-moon { display: none; }
+[data-theme="light"] .icon-sun { display: none; }
+:root:not([data-theme]) .icon-sun { display: none; } /* no-JS: show moon as inert */
+.nav-toggle { display: none; }
+.nav-toggle span { display: block; width: 16px; height: 2px; background: currentColor; margin: 2.5px 0; transition: transform .25s ease; }
+
+@media (max-width: 767px) {
+  .nav-toggle { display: grid; }
+  .nav-links {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; padding: .75rem 1.25rem 1rem; gap: .15rem;
+    background: color-mix(in srgb, var(--paper) 94%, transparent);
+    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+    display: none;
+  }
+  .nav-links.open { display: flex; }
+  .nav-toggle[aria-expanded="true"] span:first-child { transform: translateY(4.5px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:last-child { transform: translateY(-2.5px) rotate(-45deg); }
+}
+
 /* ============ No-JS fallback (keep last) ============ */
