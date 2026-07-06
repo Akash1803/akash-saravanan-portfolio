@@ -32,7 +32,7 @@ Static site, no frameworks, no build step. Content lives directly in
 semantic HTML; JavaScript is used only for interactivity, so the page
 stays fully readable with JS disabled.
 
-```
+```text
 C:\Users\FAI-Akash\portfolio\
 ├── index.html        ← all content, clear section comments
 ├── css\styles.css    ← design tokens, themes, all section styles
@@ -77,14 +77,16 @@ Clean minimal foundation with deliberate visual richness. Professional
 enough for recruiters, distinctive enough to be memorable.
 
 - **Typography:** one distinctive display font for headings + clean
-  body font. Self-hosted or system-stack fallback — no layout-shifting
+  body font, chosen during implementation to fit the elevated-minimal
+  direction. Self-hosted or system-stack fallback — no layout-shifting
   webfont loads. Strict type scale, generous line-height.
 - **Color:** near-neutral base, one confident accent. Light + dark
   themes via CSS custom properties; defaults to `prefers-color-scheme`,
   manual toggle persists in `localStorage`.
 - **Richness touches:** glassy sticky nav, subtle gradient accents on
-  hero/CTAs, quiet background texture (fine grid or map-contour lines —
-  a nod to GIS work), consistent shadow/radius system.
+  hero/CTAs, quiet map-contour-line background texture (a nod to GIS
+  work; fall back to a fine grid if contours read busy), consistent
+  shadow/radius system.
 - **Motion:** soft scroll-reveal of sections, gentle hover lifts,
   smooth theme transition — all gated behind `prefers-reduced-motion`.
 - **Maturity details:** favicon, Open Graph + social-preview tags,
@@ -118,6 +120,9 @@ enough for recruiters, distinctive enough to be memorable.
 ## 8. Repository & deployment
 
 - Local git repo at `C:\Users\FAI-Akash\portfolio` (created).
+- Commit identity is a temporary placeholder ("Akash
+  <update-me@example.com>") — must be replaced with Akash's personal
+  name/email (NOT the shared Rahul account) before any push to GitHub.
 - **Deploy later:** GitHub Pages wiring (personal account, repo name,
   username) is a separate future step. The site must run perfectly by
   opening `index.html` locally or via any static file server.
@@ -134,7 +139,7 @@ enough for recruiters, distinctive enough to be memorable.
 ## 10. Decisions log
 
 | Decision | Choice |
-|---|---|
+| --- | --- |
 | Purpose | Professional presence + job applications |
 | Format | Single-page static site (HTML/CSS/JS, no build step) |
 | Structure | Semantic HTML + separate CSS/JS; content in HTML |
