@@ -243,4 +243,17 @@ a:hover { color: var(--accent); }
   .plate { display: none; }
 }
 
+/* ============ About ============ */
+.about-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 3rem; align-items: start; }
+.about-text p { max-width: 38rem; }
+.facts {
+  margin: 0; border: 1px solid var(--line); border-radius: var(--r-m);
+  background: var(--surface); box-shadow: var(--shadow-1); padding: .5rem 1.4rem;
+}
+.fact { display: flex; justify-content: space-between; gap: 1rem; padding: .85rem 0; }
+.fact + .fact { border-top: 1px dashed var(--line); }
+.fact dt { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.fact dd { margin: 0; font-weight: 500; text-align: right; }
+@media (max-width: 767px) { .about-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+
 /* ============ No-JS fallback (keep last) ============ */
