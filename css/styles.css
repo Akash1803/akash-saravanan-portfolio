@@ -313,4 +313,35 @@ a:hover { color: var(--accent); }
 .p-links { margin: 1.2rem 0 0; }
 @media (max-width: 767px) { .projects-grid { grid-template-columns: 1fr; } }
 
+/* ============ Skills legend ============ */
+.legend {
+  border: 1px solid var(--line); border-radius: var(--r-m); background: var(--surface);
+  box-shadow: var(--shadow-1); padding: 1.75rem;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1.75rem 2rem;
+}
+.legend-group h3 {
+  font-family: var(--font-mono); font-size: .75rem; font-weight: 500;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+  margin: 0 0 .7rem; padding-bottom: .45rem; border-bottom: 1px dashed var(--line);
+}
+.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .45rem; }
+.chip {
+  font-size: .9rem; font-weight: 500; padding: .3rem .7rem;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--paper);
+}
+.chip:hover { border-color: var(--accent); color: var(--accent-ink); }
+
+/* ============ Education ============ */
+.edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+.edu-card {
+  border: 1px solid var(--line); border-left: 3px solid var(--accent);
+  border-radius: var(--r-m); background: var(--surface); box-shadow: var(--shadow-1);
+  padding: 1.4rem 1.6rem;
+}
+.edu-years { font-family: var(--font-mono); font-size: .82rem; color: var(--muted); margin: 0 0 .3rem; }
+.edu-degree { font-size: 1.15rem; margin: 0 0 .15rem; }
+.edu-inst { color: var(--accent-ink); font-weight: 500; margin: 0 0 .5rem; }
+.edu-note { color: var(--muted); font-size: .95rem; margin: 0; }
+.certs { margin-top: 1.75rem; }
+
 /* ============ No-JS fallback (keep last) ============ */
