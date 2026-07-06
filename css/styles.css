@@ -276,4 +276,41 @@ a:hover { color: var(--accent); }
 .t-points li { margin-bottom: .45rem; color: var(--muted); }
 .t-points li::marker { color: var(--accent); }
 
+/* ============ Projects ============ */
+.projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.project { grid-column: span 1; border: 1px solid var(--line); border-radius: var(--r-m);
+  background: var(--surface); box-shadow: var(--shadow-1); overflow: hidden;
+  transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease; }
+.project:hover { box-shadow: var(--shadow-2); transform: translateY(-2px); border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
+.project.featured { grid-column: 1 / -1; }
+.project-face { list-style: none; cursor: pointer; padding: 1.4rem 1.6rem; display: grid; gap: .9rem; position: relative; }
+.project-face::-webkit-details-marker { display: none; }
+.project-face::after {
+  content: ""; position: absolute; right: 1.5rem; top: 1.7rem;
+  width: 9px; height: 9px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg); transition: transform .25s ease;
+}
+.project[open] .project-face::after { transform: rotate(225deg) translate(-2px, -2px); }
+.p-head { display: grid; gap: .3rem; padding-right: 2rem; }
+.p-name { font-family: var(--font-display); font-weight: 600; font-size: 1.22rem; }
+.p-one { color: var(--muted); font-size: .98rem; }
+.tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+.tag {
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .04em;
+  padding: .22rem .55rem; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent-ink);
+}
+.project-body { padding: 0 1.6rem 1.5rem; border-top: 1px dashed var(--line); }
+.project[open] .project-body { animation: body-in .3s ease; }
+@keyframes body-in { from { opacity: 0; translate: 0 -6px; } to { opacity: 1; translate: 0 0; } }
+.p-block h4 {
+  font-family: var(--font-mono); font-size: .75rem; font-weight: 500;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--accent-ink);
+  margin: 1.3rem 0 .3rem;
+}
+.p-block p { margin: 0; color: var(--muted); }
+.p-note { font-size: .88rem; color: var(--muted); font-style: italic; margin: 1.2rem 0 0; }
+.p-links { margin: 1.2rem 0 0; }
+@media (max-width: 767px) { .projects-grid { grid-template-columns: 1fr; } }
+
 /* ============ No-JS fallback (keep last) ============ */
