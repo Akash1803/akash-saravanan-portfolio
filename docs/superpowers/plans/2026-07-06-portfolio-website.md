@@ -119,11 +119,11 @@ Expected: 7 files, each > 10 KB. **If any download fails, continue anyway** — 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Akash S — Full-Stack &amp; GIS Developer</title>
-  <meta name="description" content="Akash S — full-stack and GIS developer in Chennai, India. I build web-based mapping platforms and spatial data tools.">
+  <title>Akash Saravanan — Geospatial Analyst &amp; GIS Developer</title>
+  <meta name="description" content="Akash Saravanan — geospatial analyst and GIS developer in Chennai, India. Remote sensing, LiDAR and Earth Observation analysis, plus web-based GIS platforms.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Akash S — Full-Stack &amp; GIS Developer">
-  <meta property="og:description" content="I build web-based mapping platforms and spatial data tools.">
+  <meta property="og:title" content="Akash Saravanan — Geospatial Analyst &amp; GIS Developer">
+  <meta property="og:description" content="Remote sensing and Earth Observation analysis, plus web-based GIS platforms.">
   <meta name="theme-color" content="#F6F7F5">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/styles.css">
@@ -371,13 +371,13 @@ git add -A && git commit -m "feat: design tokens, two themes, base styles, surve
 ```html
   <header class="nav">
     <div class="nav-inner">
-      <a class="brand" href="#top" aria-label="Akash S — back to top">
+      <a class="brand" href="#top" aria-label="Akash Saravanan — back to top">
         <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" width="26" height="26">
           <circle cx="32" cy="36" r="20" fill="none" stroke="currentColor" stroke-width="4"/>
           <path d="M32 8 L46 32 H18 Z" fill="currentColor"/>
           <circle cx="32" cy="36" r="4" fill="currentColor"/>
         </svg>
-        <span>Akash&nbsp;S</span>
+        <span>Akash&nbsp;Saravanan</span>
       </a>
       <nav aria-label="Section navigation">
         <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navLinks" aria-label="Menu">
@@ -530,9 +530,9 @@ git add -A && git commit -m "feat: glassy sticky nav with theme toggle and mobil
       <div class="hero-inner">
         <div class="hero-copy">
           <p class="eyebrow">Chennai, India · 13.0827° N, 80.2707° E</p>
-          <h1 class="hero-title">Akash&nbsp;S</h1>
-          <p class="hero-role">Full-Stack &amp; GIS Developer</p>
-          <p class="hero-sub"><!-- CONTENT-PASS -->[I build web-based mapping platforms and spatial data tools — from CAD-to-web pipelines to map interfaces used by government planners.]</p>
+          <h1 class="hero-title">Akash Saravanan</h1>
+          <p class="hero-role">Geospatial Analyst &amp; GIS Developer</p>
+          <p class="hero-sub">I turn satellite imagery, LiDAR and survey data into decisions — and build the web platforms that put those maps in front of the people who make them.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="#projects">View projects</a>
             <a class="btn btn-ghost" href="assets/resume.pdf" download>Download resume</a>
@@ -584,7 +584,7 @@ git add -A && git commit -m "feat: glassy sticky nav with theme toggle and mobil
   position: relative;
 }
 .hero-title {
-  font-size: clamp(2.9rem, 8vw, 4.9rem); font-weight: 700;
+  font-size: clamp(2.5rem, 7vw, 4.2rem); font-weight: 700;
   letter-spacing: -0.02em; margin: .1em 0 .05em;
 }
 .hero-role {
@@ -667,12 +667,13 @@ git add -A && git commit -m "feat: hero with animated contour-field signature an
       </div>
       <div class="about-grid">
         <div class="about-text">
-          <p><!-- CONTENT-PASS -->[I started in civil engineering and found my way into software through the maps — first drafting them, then building the platforms that serve them. Today I work across the stack: React map interfaces on the front, Python services and spatial data pipelines behind them.]</p>
-          <p><!-- CONTENT-PASS -->[What I enjoy most is the unglamorous middle of the problem: getting a 6,000-feature layer to render smoothly, or turning a messy CAD drawing into clean web geometry.]</p>
+          <p>I came to maps from the ground up — literally. I started as a civil engineer supervising construction sites, moved into GIS analysis, and spent four years turning satellite imagery, LiDAR point clouds and drone surveys into answers: where to build an industrial park, how much coal sits in a stockpile, which land parcels don't match their tax records.</p>
+          <p>These days I also build the software side — web-based GIS platforms with React and Leaflet on the front and Python behind them, plus PyQGIS automation that removes the manual grind from spatial QC. I like the whole pipeline: from raw survey data to a map someone can actually make a decision with.</p>
         </div>
         <dl class="facts">
           <div class="fact"><dt>Location</dt><dd>Chennai, India</dd></div>
-          <div class="fact"><dt>Current role</dt><dd>[Software Engineer, FarmwiseAI]</dd></div>
+          <div class="fact"><dt>Current role</dt><dd>GIS Analyst, FarmwiseAI</dd></div>
+          <div class="fact"><dt>Background</dt><dd>Civil Engineering</dd></div>
           <div class="fact"><dt>Languages</dt><dd>[English, Tamil]</dd></div>
           <div class="fact"><dt>Email</dt><dd><a href="mailto:akashcivil04@gmail.com">akashcivil04@gmail.com</a></dd></div>
         </dl>
@@ -718,22 +719,33 @@ git add -A && git commit -m "feat: hero with animated contour-field signature an
       </div>
       <ol class="timeline">
         <li class="t-item t-current">
-          <p class="t-date">[2024] — Present</p>
-          <h3 class="t-role">[Software Engineer]</h3>
+          <p class="t-date">Sep 2025 — Present</p>
+          <h3 class="t-role">GIS Analyst</h3>
           <p class="t-org">FarmwiseAI · Chennai</p>
           <ul class="t-points">
-            <li><!-- CONTENT-PASS -->[Built a web-based GIS platform for a government transport authority — React/Leaflet front end with a Python backend serving spatial layers, used by planners to review land-parcel layouts.]</li>
-            <li><!-- CONTENT-PASS -->[Engineered a CAD-to-web pipeline converting DWG/DXF drawings into cached SVG map layers, including failure recovery around an unreliable converter toolchain.]</li>
-            <li><!-- CONTENT-PASS -->[Optimized canvas rendering to keep 6,000+ polygon features interactive, with clustering, labeling, and classification logic.]</li>
+            <li>Building a web-based GIS platform for a government transport authority — React/Leaflet map interface over a Python backend, used by planners to review land-parcel layouts, with a DWG/DXF-to-web ingestion pipeline and 6,000+ interactive features per view.</li>
+            <li>Conducting techno-economic feasibility studies (TEFR) and multi-criteria site-suitability models for proposed industrial parks — land potential, connectivity, and investment viability.</li>
+            <li>Executing end-to-end AutoCAD FMB stitching, turning raw survey records into high-accuracy industrial layouts, and leading QGIS-based QA/QC for property-tax geospatial projects with 100% data-integrity targets.</li>
+            <li>Automating daily GIS workflows with Python and applying GeoAI models for predictive land-use analysis and automated feature extraction.</li>
           </ul>
         </li>
         <li class="t-item">
-          <p class="t-date">[YEAR — YEAR]</p>
-          <h3 class="t-role">[Earlier role — add from resume]</h3>
-          <p class="t-org">[Organization · City]</p>
+          <p class="t-date">Jan 2023 — Aug 2025</p>
+          <h3 class="t-role">GIS Analyst</h3>
+          <p class="t-org">Operational Energy Group India · Chennai</p>
           <ul class="t-points">
-            <li><!-- CONTENT-PASS -->[Impact bullet from resume.]</li>
-            <li><!-- CONTENT-PASS -->[Impact bullet from resume.]</li>
+            <li>Across three group companies (OEG, OEG Defence &amp; Aerospace, Zuppa GEN5): built GIS datasets, geodatabases and topographic maps for engineering and defence applications in ArcGIS Pro and QGIS.</li>
+            <li>Developed ArcGIS Online dashboards for coal-stockpile inventory monitoring and performed volumetric analysis and topographic mapping for thermal power plants.</li>
+            <li>Planned and flew drone survey missions, processed the data (geotagging, photogrammetry), and gave technical demonstrations at industry expos and client meetings.</li>
+          </ul>
+        </li>
+        <li class="t-item">
+          <p class="t-date">Dec 2021 — Dec 2022</p>
+          <h3 class="t-role">Site Engineer</h3>
+          <p class="t-org">SSG Engineers · Salem</p>
+          <ul class="t-points">
+            <li>Supervised daily construction activities against project plans and safety standards, coordinating contractors, suppliers and material deliveries.</li>
+            <li>Ran quality checks on workmanship and materials and maintained site inspection documentation — the ground-truth instincts I still use in GIS work.</li>
           </ul>
         </li>
       </ol>
@@ -795,9 +807,9 @@ git add -A && git commit -m "feat: hero with animated contour-field signature an
             <span class="tags"><span class="tag">React</span><span class="tag">Leaflet</span><span class="tag">Python</span><span class="tag">PostGIS</span></span>
           </summary>
           <div class="project-body">
-            <div class="p-block"><h4>The problem</h4><p><!-- CONTENT-PASS -->[Planners reviewed land-parcel layouts on paper and desktop CAD — slow to share, impossible to search, disconnected from base maps.]</p></div>
-            <div class="p-block"><h4>What I built</h4><p><!-- CONTENT-PASS -->[A single-view web platform: layered map viewer with 6,000+ interactive plot features, DWG/DXF-to-SVG ingestion, measurement and comparison tools, role-based access, and a review mode for stakeholders.]</p></div>
-            <div class="p-block"><h4>My role</h4><p><!-- CONTENT-PASS -->[End-to-end developer — frontend map UI, backend services, data pipeline, and deployment packaging.]</p></div>
+            <div class="p-block"><h4>The problem</h4><p>Planners reviewed land-parcel layouts on paper and in desktop CAD — slow to share, impossible to search, and disconnected from base maps and district context.</p></div>
+            <div class="p-block"><h4>What I built</h4><p>A single-view web platform: a layered map viewer keeping 6,000+ plot features interactive, DWG/DXF-to-web ingestion with automatic classification and labeling, measurement and side-by-side comparison tools, and a locked-down review mode for stakeholders.</p></div>
+            <div class="p-block"><h4>My role</h4><p>End-to-end developer — React/Leaflet map UI, Python backend services, the CAD ingestion pipeline, and deployment packaging.</p></div>
             <p class="p-note">Built for a government client — code and live site are private.</p>
           </div>
         </details>
@@ -805,32 +817,60 @@ git add -A && git commit -m "feat: hero with animated contour-field signature an
         <details class="project">
           <summary class="project-face">
             <span class="p-head">
-              <span class="p-name">[Urban Heat Dashboard]</span>
-              <span class="p-one"><!-- CONTENT-PASS -->[One-line description — what it shows and for whom.]</span>
+              <span class="p-name">PyQGIS QC Automation — Coimbatore City</span>
+              <span class="p-one">Automated spatial-error detection between building footprints and geocode records for a municipal corporation.</span>
             </span>
-            <span class="tags"><span class="tag">[Python]</span><span class="tag">[GIS]</span></span>
+            <span class="tags"><span class="tag">PyQGIS</span><span class="tag">Python</span><span class="tag">QGIS</span></span>
           </summary>
           <div class="project-body">
-            <div class="p-block"><h4>The problem</h4><p><!-- CONTENT-PASS -->[…]</p></div>
-            <div class="p-block"><h4>What I built</h4><p><!-- CONTENT-PASS -->[…]</p></div>
-            <div class="p-block"><h4>My role</h4><p><!-- CONTENT-PASS -->[…]</p></div>
-            <p class="p-links"><a href="[GITHUB-REPO-URL]">Source ↗</a></p>
+            <div class="p-block"><h4>The problem</h4><p>Coimbatore City Municipal Corporation's property records lived in two shapefile universes — building footprints and geocodes — and mismatches between them had to be found by hand, parcel by parcel, across residential, commercial and industrial classes.</p></div>
+            <div class="p-block"><h4>What I built</h4><p>A PyQGIS automation script that detects spatial mismatches between the two datasets, plus custom in-QGIS shortcuts that streamline the error-identification workflow for the QC team.</p></div>
+            <div class="p-block"><h4>The result</h4><p>A 25% reduction in manual quality-control workload across the citywide dataset.</p></div>
           </div>
         </details>
 
         <details class="project">
           <summary class="project-face">
             <span class="p-head">
-              <span class="p-name">[QGIS AI Segmentation]</span>
-              <span class="p-one"><!-- CONTENT-PASS -->[One-line description.]</span>
+              <span class="p-name">Photogrammetry &amp; Volumetric Estimation</span>
+              <span class="p-one">DSMs, orthomosaics and volume calculations for highways, railways, river beds and coal stockpiles.</span>
             </span>
-            <span class="tags"><span class="tag">[QGIS]</span><span class="tag">[ML]</span></span>
+            <span class="tags"><span class="tag">Photogrammetry</span><span class="tag">LiDAR</span><span class="tag">Drone survey</span></span>
           </summary>
           <div class="project-body">
-            <div class="p-block"><h4>The problem</h4><p><!-- CONTENT-PASS -->[…]</p></div>
-            <div class="p-block"><h4>What I built</h4><p><!-- CONTENT-PASS -->[…]</p></div>
-            <div class="p-block"><h4>My role</h4><p><!-- CONTENT-PASS -->[…]</p></div>
-            <p class="p-links"><a href="[GITHUB-REPO-URL]">Source ↗</a></p>
+            <div class="p-block"><h4>The problem</h4><p>Infrastructure corridors and resource stockpiles needed accurate elevation models and quantity estimates — inputs that planning and billing decisions depend on directly.</p></div>
+            <div class="p-block"><h4>What I built</h4><p>Processed aerial survey data into DSMs, orthomosaics and contour maps for National Highway, railway and river-bed projects, and performed point-cloud-based volumetric estimation of coal stockpiles for thermal power plants.</p></div>
+            <div class="p-block"><h4>My role</h4><p>End-to-end: drone mission planning and execution through data processing to final deliverables.</p></div>
+          </div>
+        </details>
+
+        <details class="project">
+          <summary class="project-face">
+            <span class="p-head">
+              <span class="p-name">Industrial Park Site Suitability &amp; TEFR</span>
+              <span class="p-one">Multi-criteria spatial models and techno-economic feasibility inputs for proposed industrial parks.</span>
+            </span>
+            <span class="tags"><span class="tag">Spatial analysis</span><span class="tag">MCDM</span><span class="tag">QGIS</span></span>
+          </summary>
+          <div class="project-body">
+            <div class="p-block"><h4>The problem</h4><p>Selecting where to put an industrial park means balancing land use, terrain, infrastructure proximity and environmental constraints — with crores of investment riding on the answer.</p></div>
+            <div class="p-block"><h4>What I built</h4><p>Multi-criteria decision-making models integrating land-use, terrain and connectivity datasets into suitability maps, and geospatial inputs to techno-economic feasibility reports covering planning, investment viability and regulatory compliance.</p></div>
+            <div class="p-block"><h4>My role</h4><p>Spatial analysis lead — from raw datasets to the suitability maps and location intelligence used in executive decision-making.</p></div>
+          </div>
+        </details>
+
+        <details class="project">
+          <summary class="project-face">
+            <span class="p-head">
+              <span class="p-name">Cadastral FMB Stitching at Scale</span>
+              <span class="p-one">Field Map Book stitching and land-parcel mapping for sites from 200 to 2,000 acres.</span>
+            </span>
+            <span class="tags"><span class="tag">AutoCAD</span><span class="tag">Cadastral</span><span class="tag">Survey data</span></span>
+          </summary>
+          <div class="project-body">
+            <div class="p-block"><h4>The problem</h4><p>Large infrastructure projects need legally-defensible parcel maps assembled from hundreds of individual Field Map Book records — where boundary errors translate into land-acquisition disputes.</p></div>
+            <div class="p-block"><h4>What I built</h4><p>End-to-end AutoCAD FMB stitching workflows producing seamless, high-accuracy cadastral maps across multiple project sites, preserving spatial accuracy and boundary integrity for legal documentation.</p></div>
+            <div class="p-block"><h4>My role</h4><p>Precision drafting and boundary QA across parcels ranging from 200 to 2,000 acres.</p></div>
           </div>
         </details>
       </div>
@@ -877,7 +917,7 @@ git add -A && git commit -m "feat: hero with animated contour-field signature an
 @media (max-width: 767px) { .projects-grid { grid-template-columns: 1fr; } }
 ```
 
-- [ ] **Step 3: Verify** — `curl -s http://localhost:4173/ | grep -c '<details class="project'` → `3`. Visually: featured card spans full width; cards expand/collapse on click AND with Enter/Space when the summary is focused (native `<details>` behavior); chevron rotates.
+- [ ] **Step 3: Verify** — `curl -s http://localhost:4173/ | grep -c '<details class="project'` → `5`. Visually: featured card spans full width; cards expand/collapse on click AND with Enter/Space when the summary is focused (native `<details>` behavior); chevron rotates.
 
 - [ ] **Step 4: Commit** — `git add -A && git commit -m "feat: expandable project cards with featured WebGIS case study"`
 
@@ -899,24 +939,24 @@ git add -A && git commit -m "feat: hero with animated contour-field signature an
       </div>
       <div class="legend">
         <div class="legend-group">
-          <h3>Languages</h3>
-          <ul class="chips"><li class="chip">Python</li><li class="chip">JavaScript</li><li class="chip">SQL</li><li class="chip">[HTML/CSS]</li></ul>
+          <h3>GIS &amp; EO Tools</h3>
+          <ul class="chips"><li class="chip">QGIS</li><li class="chip">ArcGIS Pro</li><li class="chip">Google Earth Engine</li><li class="chip">ENVI</li><li class="chip">AutoCAD</li><li class="chip">ArcGIS Online</li></ul>
         </div>
         <div class="legend-group">
-          <h3>Frontend</h3>
-          <ul class="chips"><li class="chip">React</li><li class="chip">Leaflet</li><li class="chip">Vite</li><li class="chip">[Canvas API]</li></ul>
+          <h3>Remote Sensing</h3>
+          <ul class="chips"><li class="chip">LiDAR processing</li><li class="chip">Hyperspectral</li><li class="chip">Multispectral</li><li class="chip">NDVI / EVI / SAVI</li><li class="chip">Image classification</li><li class="chip">Photogrammetry</li></ul>
         </div>
         <div class="legend-group">
-          <h3>Backend</h3>
-          <ul class="chips"><li class="chip">[FastAPI/Flask]</li><li class="chip">REST APIs</li><li class="chip">JWT auth</li><li class="chip">[PostgreSQL]</li></ul>
+          <h3>Python &amp; Automation</h3>
+          <ul class="chips"><li class="chip">Python</li><li class="chip">PyQGIS</li><li class="chip">Rasterio</li><li class="chip">GDAL</li><li class="chip">GeoPandas</li><li class="chip">Shapely</li><li class="chip">NumPy</li></ul>
         </div>
         <div class="legend-group">
-          <h3>GIS &amp; Data</h3>
-          <ul class="chips"><li class="chip">QGIS</li><li class="chip">PostGIS</li><li class="chip">GeoJSON</li><li class="chip">DWG/DXF pipelines</li></ul>
+          <h3>Web GIS</h3>
+          <ul class="chips"><li class="chip">React</li><li class="chip">Leaflet</li><li class="chip">JavaScript</li><li class="chip">[PostGIS]</li><li class="chip">[REST APIs]</li></ul>
         </div>
         <div class="legend-group">
-          <h3>Tools</h3>
-          <ul class="chips"><li class="chip">Git</li><li class="chip">[AWS]</li><li class="chip">[Docker]</li><li class="chip">Claude Code</li></ul>
+          <h3>Field &amp; Survey</h3>
+          <ul class="chips"><li class="chip">Drone operations</li><li class="chip">Cadastral / FMB</li><li class="chip">Volumetric analysis</li><li class="chip">Topographic mapping</li></ul>
         </div>
       </div>
 ```
@@ -930,11 +970,21 @@ git add -A && git commit -m "feat: hero with animated contour-field signature an
       </div>
       <div class="edu-grid">
         <div class="edu-card">
-          <p class="edu-years">[YEAR — YEAR]</p>
-          <h3 class="edu-degree">[B.E. Civil Engineering]</h3>
-          <p class="edu-inst">[Institution name, City]</p>
-          <p class="edu-note"><!-- CONTENT-PASS -->[Optional: CGPA, final-year project, or notable achievement.]</p>
+          <p class="edu-years">Graduated Sep 2020</p>
+          <h3 class="edu-degree">B.E. Civil Engineering</h3>
+          <p class="edu-inst">Panimalar Engineering College, Chennai</p>
+          <p class="edu-note">CGPA 7.32 / 10.0</p>
         </div>
+        <div class="edu-card">
+          <p class="edu-years">Graduated May 2017</p>
+          <h3 class="edu-degree">Diploma in Civil Engineering</h3>
+          <p class="edu-inst">Thiagarajar Polytechnic College, Salem</p>
+          <p class="edu-note">86.74%</p>
+        </div>
+      </div>
+      <div class="legend-group certs">
+        <h3>Certifications</h3>
+        <ul class="chips"><li class="chip">Advanced GIS &amp; Remote Sensing (ArcGIS Pro, QGIS)</li><li class="chip">AutoCAD Certification</li></ul>
       </div>
 ```
 
@@ -970,9 +1020,10 @@ git add -A && git commit -m "feat: hero with animated contour-field signature an
 .edu-degree { font-size: 1.15rem; margin: 0 0 .15rem; }
 .edu-inst { color: var(--accent-ink); font-weight: 500; margin: 0 0 .5rem; }
 .edu-note { color: var(--muted); font-size: .95rem; margin: 0; }
+.certs { margin-top: 1.75rem; }
 ```
 
-- [ ] **Step 4: Verify** — `curl -s http://localhost:4173/ | grep -c 'class="legend-group"'` → `5`; visually: one legend card with 5 grouped columns collapsing gracefully; education card with accent left rule.
+- [ ] **Step 4: Verify** — `curl -s http://localhost:4173/ | grep -c 'class="legend-group'` → `6` (5 skill groups + certifications); visually: one legend card with 5 grouped columns collapsing gracefully; two education cards with accent left rule; certification chips below them.
 
 - [ ] **Step 5: Commit** — `git add -A && git commit -m "feat: skills legend and education cards"`
 
@@ -1009,7 +1060,7 @@ Footer (replace the FOOTER placeholder region):
 
 ```html
   <footer class="footer">
-    <p>Built by Akash S · <span id="year"></span></p>
+    <p>Built by Akash Saravanan · <span id="year"></span></p>
     <p class="footer-mono">13.0827° N, 80.2707° E</p>
   </footer>
 ```
@@ -1143,7 +1194,7 @@ Then point BOTH resume buttons (hero + contact) at nothing yet? No — keep them
 **Files:**
 - Modify: `index.html` (all `[BRACKETED]` + `<!-- CONTENT-PASS -->` slots), Create: `assets/resume.pdf`, possibly `assets/profile.jpg`
 
-- [ ] **Step 1: Intake** — ask Akash for: the resume file (any format), GitHub URL, LinkedIn URL, education details, earlier roles, project confirmations (urban-heat-dashboard, QGIS AI segmentation — real names/descriptions/repos), languages, current job title + start year, and whether he has a profile photo. Read the resume with the appropriate parser.
+- [ ] **Step 1: Intake** — most content is already real (resume received 2026-07-06; headline, dates, experience, projects, education, certifications confirmed). Remaining unknowns to collect from Akash: GitHub URL, LinkedIn URL, languages spoken confirmation, the `[PostGIS]`/`[REST APIs]` skill chips (confirm or swap), whether he has a profile photo, and any approved screenshots for the featured WebGIS card.
 - [ ] **Step 2: Rewrite every placeholder** — replace all bracketed text and CONTENT-PASS slots with confirmed, first-person, impact-focused copy. Verify zero remaining placeholders:
 
 ```bash
