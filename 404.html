@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Off the map — Akash S</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t !== 'light' && t !== 'dark') { t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+  <main class="section" style="text-align:center; padding-top:18vh;">
+    <p class="eyebrow" style="justify-content:center;">404 · Uncharted</p>
+    <h1 class="section-title">This page is off the map</h1>
+    <p style="color:var(--muted);">The coordinates you followed don't resolve to anything here.</p>
+    <p><a class="btn btn-primary" href="/">Back to the site</a></p>
+  </main>
+</body>
+</html>
