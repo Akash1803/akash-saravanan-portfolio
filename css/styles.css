@@ -1,1 +1,120 @@
-/* Design system arrives in Task 2 */
+/* ============ Fonts ============ */
+@font-face { font-family: "Clash Display"; src: url("../assets/fonts/clash-display-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Clash Display"; src: url("../assets/fonts/clash-display-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("../assets/fonts/archivo-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("../assets/fonts/archivo-500.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("../assets/fonts/archivo-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("../assets/fonts/ibm-plex-mono-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("../assets/fonts/ibm-plex-mono-500.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+
+/* ============ Tokens ============ */
+:root {
+  --paper: #F6F7F5;
+  --surface: #FFFFFF;
+  --ink: #16211E;
+  --muted: #5A6963;
+  --line: #DFE5E1;
+  --contour: #E7ECE8;
+  --accent: #0E7C66;
+  --accent-ink: #0A5C4C;
+  --accent-soft: rgba(14, 124, 102, 0.08);
+  --flag: #C97B2D;
+  --shadow-1: 0 1px 2px rgba(22,33,30,.05), 0 4px 16px rgba(22,33,30,.06);
+  --shadow-2: 0 2px 4px rgba(22,33,30,.07), 0 14px 36px rgba(22,33,30,.11);
+  --r-s: 8px; --r-m: 14px; --r-l: 20px;
+  --font-display: "Clash Display", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Archivo", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", Consolas, monospace;
+  --w-max: 1100px;
+  color-scheme: light;
+}
+[data-theme="dark"] {
+  --paper: #0F1714;
+  --surface: #161F1B;
+  --ink: #E7EDEA;
+  --muted: #93A29B;
+  --line: #243029;
+  --contour: #1A241F;
+  --accent: #57B99D;
+  --accent-ink: #79CDB6;
+  --accent-soft: rgba(87, 185, 157, 0.10);
+  --flag: #D8925B;
+  --shadow-1: 0 1px 2px rgba(0,0,0,.35), 0 4px 16px rgba(0,0,0,.35);
+  --shadow-2: 0 2px 4px rgba(0,0,0,.4), 0 14px 36px rgba(0,0,0,.5);
+  color-scheme: dark;
+}
+/* No-JS dark fallback: boot script always sets data-theme when JS runs,
+   so this only fires when JS is off and the OS prefers dark. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    --paper: #0F1714; --surface: #161F1B; --ink: #E7EDEA; --muted: #93A29B;
+    --line: #243029; --contour: #1A241F;
+    --accent: #57B99D; --accent-ink: #79CDB6; --accent-soft: rgba(87,185,157,.10);
+    --flag: #D8925B;
+    --shadow-1: 0 1px 2px rgba(0,0,0,.35), 0 4px 16px rgba(0,0,0,.35);
+    --shadow-2: 0 2px 4px rgba(0,0,0,.4), 0 14px 36px rgba(0,0,0,.5);
+    color-scheme: dark;
+  }
+}
+
+/* ============ Reset & base ============ */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+  transition: background-color .35s ease, color .35s ease;
+}
+/* Survey-grid backdrop, faded toward the middle of the page */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background-image:
+    linear-gradient(var(--contour) 1px, transparent 1px),
+    linear-gradient(90deg, var(--contour) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(180deg, rgba(0,0,0,.9), rgba(0,0,0,.25) 40%, rgba(0,0,0,.55));
+  -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,.9), rgba(0,0,0,.25) 40%, rgba(0,0,0,.55));
+}
+img, svg { max-width: 100%; display: block; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.12; margin: 0 0 .5em; letter-spacing: -0.01em; }
+p { margin: 0 0 1em; }
+a { color: var(--accent-ink); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+::selection { background: var(--accent); color: var(--paper); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+/* ============ Layout utilities ============ */
+.section { max-width: var(--w-max); margin: 0 auto; padding: clamp(4rem, 9vh, 6.5rem) 1.5rem 0; }
+.section-head { margin-bottom: 2.25rem; }
+.eyebrow {
+  font-family: var(--font-mono); font-size: .8125rem; font-weight: 500;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--accent-ink);
+  display: flex; align-items: center; gap: .75rem; margin: 0 0 .6rem;
+}
+/* contour-tick ornament after the eyebrow */
+.eyebrow::after { content: ""; height: 1px; width: 3.5rem; background:
+  repeating-linear-gradient(90deg, var(--accent-ink) 0 6px, transparent 6px 10px); }
+.section-title { font-size: clamp(1.75rem, 3.5vw, 2.375rem); font-weight: 600; }
+
+.skip-link {
+  position: absolute; left: 1rem; top: -3rem; z-index: 100;
+  background: var(--accent); color: #fff; padding: .5rem 1rem;
+  border-radius: var(--r-s); transition: top .2s ease;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ============ Scroll reveal (JS adds .in) ============ */
+.reveal { opacity: 0; translate: 0 16px; transition: opacity .6s ease, translate .6s ease; }
+.reveal.in { opacity: 1; translate: 0 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; translate: none; }
+}
+
+/* ============ No-JS fallback (keep last) ============ */
