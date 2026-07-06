@@ -120,9 +120,8 @@ enough for recruiters, distinctive enough to be memorable.
 ## 8. Repository & deployment
 
 - Local git repo at `C:\Users\FAI-Akash\portfolio` (created).
-- Commit identity is a temporary placeholder ("Akash
-  <update-me@example.com>") — must be replaced with Akash's personal
-  name/email (NOT the shared Rahul account) before any push to GitHub.
+- Commit identity: Akash's personal account — "Akash S
+  <akashcivil04@gmail.com>" (NOT the shared Rahul account).
 - **Deploy later:** GitHub Pages wiring (personal account, repo name,
   username) is a separate future step. The site must run perfectly by
   opening `index.html` locally or via any static file server.
