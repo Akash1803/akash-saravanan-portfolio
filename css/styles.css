@@ -7,18 +7,18 @@
 
 /* ============ Tokens ============ */
 :root {
-  --paper: #F6F7F5;
+  --paper: #F7F7FB;
   --surface: #FFFFFF;
-  --ink: #16211E;
-  --muted: #5A6963;
-  --line: #DFE5E1;
-  --contour: #E7ECE8;
-  --accent: #0E7C66;
-  --accent-ink: #0A5C4C;
-  --accent-soft: rgba(14, 124, 102, 0.08);
-  --flag: #C97B2D;
-  --shadow-1: 0 1px 2px rgba(22,33,30,.05), 0 4px 16px rgba(22,33,30,.06);
-  --shadow-2: 0 2px 4px rgba(22,33,30,.07), 0 14px 36px rgba(22,33,30,.11);
+  --ink: #1B1A2B;
+  --muted: #605E76;
+  --line: #E5E4EE;
+  --contour: #ECEBF4;
+  --accent: #6D5AE6;
+  --accent-ink: #5540C8;
+  --accent-soft: rgba(109, 90, 230, 0.09);
+  --flag: #E0872E;
+  --shadow-1: 0 1px 2px rgba(26,24,46,.05), 0 4px 16px rgba(26,24,46,.07);
+  --shadow-2: 0 2px 4px rgba(26,24,46,.08), 0 14px 36px rgba(26,24,46,.13);
   --r-s: 8px; --r-m: 14px; --r-l: 20px;
   --font-display: "Clash Display", "Segoe UI", system-ui, sans-serif;
   --font-body: "Archivo", "Segoe UI", system-ui, sans-serif;
@@ -28,32 +28,32 @@
   color-scheme: light;
 }
 [data-theme="dark"] {
-  --paper: #18221E;
-  --surface: #212C27;
-  --ink: #DAE3DF;
-  --muted: #95A49D;
-  --line: #2C3832;
-  --contour: #222C27;
-  --accent: #5FBEA2;
-  --accent-ink: #83D0BB;
-  --accent-soft: rgba(95, 190, 162, 0.10);
-  --flag: #D8925B;
-  --shadow-1: 0 1px 2px rgba(0,0,0,.28), 0 4px 16px rgba(0,0,0,.30);
-  --shadow-2: 0 2px 4px rgba(0,0,0,.32), 0 14px 36px rgba(0,0,0,.42);
-  --on-accent: #0F1714;
+  --paper: #15131F;
+  --surface: #1E1B2C;
+  --ink: #E6E4F1;
+  --muted: #9C98B6;
+  --line: #2E2B40;
+  --contour: #221F33;
+  --accent: #8B7BF0;
+  --accent-ink: #A99CF5;
+  --accent-soft: rgba(139, 123, 240, 0.12);
+  --flag: #E5964A;
+  --shadow-1: 0 1px 2px rgba(0,0,0,.30), 0 4px 16px rgba(0,0,0,.34);
+  --shadow-2: 0 2px 4px rgba(0,0,0,.34), 0 14px 36px rgba(0,0,0,.46);
+  --on-accent: #14121F;
   color-scheme: dark;
 }
 /* No-JS dark fallback: boot script always sets data-theme when JS runs,
    so this only fires when JS is off and the OS prefers dark. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]):not([data-theme="dark"]) {
-    --paper: #18221E; --surface: #212C27; --ink: #DAE3DF; --muted: #95A49D;
-    --line: #2C3832; --contour: #222C27;
-    --accent: #5FBEA2; --accent-ink: #83D0BB; --accent-soft: rgba(95,190,162,.10);
-    --flag: #D8925B;
-    --shadow-1: 0 1px 2px rgba(0,0,0,.28), 0 4px 16px rgba(0,0,0,.30);
-    --shadow-2: 0 2px 4px rgba(0,0,0,.32), 0 14px 36px rgba(0,0,0,.42);
-    --on-accent: #0F1714;
+    --paper: #15131F; --surface: #1E1B2C; --ink: #E6E4F1; --muted: #9C98B6;
+    --line: #2E2B40; --contour: #221F33;
+    --accent: #8B7BF0; --accent-ink: #A99CF5; --accent-soft: rgba(139,123,240,.12);
+    --flag: #E5964A;
+    --shadow-1: 0 1px 2px rgba(0,0,0,.30), 0 4px 16px rgba(0,0,0,.34);
+    --shadow-2: 0 2px 4px rgba(0,0,0,.34), 0 14px 36px rgba(0,0,0,.46);
+    --on-accent: #14121F;
     color-scheme: dark;
   }
 }
