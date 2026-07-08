@@ -10,7 +10,7 @@
   <meta property="og:description" content="GIS analysis, spatial data automation and web-based mapping platforms.">
   <meta name="theme-color" content="#F7F7FB">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/styles.css?v=4">
+  <link rel="stylesheet" href="css/styles.css?v=6">
   <script>
     // Theme boot: runs pre-paint so there is no flash of wrong theme.
     (function () {
@@ -175,82 +175,68 @@
         <p class="eyebrow">Projects</p>
         <h2 class="section-title">Selected work</h2>
       </div>
-      <div class="projects-grid">
-        <details class="project featured">
-          <summary class="project-face">
-            <span class="p-head">
-              <span class="p-name">Government WebGIS Platform</span>
-              <span class="p-one">Map review portal for a metropolitan transport authority — parcel layouts, CAD overlays, measurement tools.</span>
-            </span>
-            <span class="tags"><span class="tag">React</span><span class="tag">Leaflet</span><span class="tag">Python</span><span class="tag">PostGIS</span></span>
-          </summary>
-          <div class="project-body">
-            <div class="p-block"><h3>The problem</h3><p>Planners reviewed land-parcel layouts on paper and in desktop CAD — slow to share, impossible to search, and disconnected from base maps and district context.</p></div>
-            <div class="p-block"><h3>What I built</h3><p>A single-view web platform: a layered map viewer keeping 6,000+ plot features interactive, DWG/DXF-to-web ingestion with automatic classification and labeling, measurement and side-by-side comparison tools, and a locked-down review mode for stakeholders.</p></div>
-            <div class="p-block"><h3>My role</h3><p>End-to-end developer — React/Leaflet map UI, Python backend services, the CAD ingestion pipeline, and deployment packaging.</p></div>
-            <p class="p-note">Built for a government client — code and live site are private.</p>
+      <div class="showcase">
+        <article class="show-row">
+          <div class="show-visual">
+            <!-- IMAGE-SLOT webgis: replace the <svg> below with  <img class="show-art" src="assets/projects/webgis.webp" alt="Government WebGIS Platform screenshot">  -->
+            <svg class="show-art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="presentation"><g fill="var(--accent-soft)" stroke="var(--accent-ink)" stroke-width="2.5"><rect x="46" y="54" width="86" height="66" rx="4"/><rect x="150" y="54" width="86" height="66" rx="4"/><rect x="254" y="54" width="86" height="66" rx="4"/><rect x="46" y="150" width="86" height="66" rx="4"/><rect x="150" y="150" width="86" height="66" rx="4"/><rect x="254" y="150" width="86" height="66" rx="4"/></g><path d="M20 262 Q120 210 210 220 T392 176" fill="none" stroke="var(--accent-ink)" stroke-width="3.5" stroke-dasharray="9 9" opacity=".7"/><g fill="var(--flag)" stroke="#fff" stroke-width="2.5"><circle cx="132" cy="120" r="8"/><circle cx="254" cy="150" r="8"/><circle cx="193" cy="88" r="8"/></g></svg>
           </div>
-        </details>
-
-        <details class="project">
-          <summary class="project-face">
-            <span class="p-head">
-              <span class="p-name">PyQGIS QC Automation — Coimbatore City</span>
-              <span class="p-one">Automated spatial-error detection between building footprints and geocode records for a municipal corporation.</span>
-            </span>
-            <span class="tags"><span class="tag">PyQGIS</span><span class="tag">Python</span><span class="tag">QGIS</span></span>
-          </summary>
-          <div class="project-body">
-            <div class="p-block"><h3>The problem</h3><p>Coimbatore City Municipal Corporation's property records lived in two shapefile universes — building footprints and geocodes — and mismatches between them had to be found by hand, parcel by parcel, across residential, commercial and industrial classes.</p></div>
-            <div class="p-block"><h3>What I built</h3><p>A PyQGIS automation script that detects spatial mismatches between the two datasets, plus custom in-QGIS shortcuts that streamline the error-identification workflow for the QC team.</p></div>
-            <div class="p-block"><h3>The result</h3><p>A 25% reduction in manual quality-control workload across the citywide dataset.</p></div>
+          <div class="show-body">
+            <p class="show-metric">6,000+ interactive features</p>
+            <h3 class="show-name">Government WebGIS Platform</h3>
+            <p class="show-desc">A single-view web platform that replaced paper and desktop CAD for a metropolitan transport authority. I built the React/Leaflet map interface, the Python backend, and a DWG/DXF-to-web ingestion pipeline &mdash; keeping 6,000+ plot features interactive with measurement, side-by-side comparison and a locked-down stakeholder review mode.</p>
+            <div class="tags"><span class="tag">React</span><span class="tag">Leaflet</span><span class="tag">Python</span><span class="tag">PostGIS</span></div>
+            <p class="show-note">Government client &mdash; code and live site are private.</p>
           </div>
-        </details>
-
-        <details class="project">
-          <summary class="project-face">
-            <span class="p-head">
-              <span class="p-name">Photogrammetry &amp; Volumetric Estimation</span>
-              <span class="p-one">DSMs, orthomosaics and volume calculations for highways, railways, river beds and coal stockpiles.</span>
-            </span>
-            <span class="tags"><span class="tag">Photogrammetry</span><span class="tag">Drone survey</span><span class="tag">Volumetrics</span></span>
-          </summary>
-          <div class="project-body">
-            <div class="p-block"><h3>The problem</h3><p>Infrastructure corridors and resource stockpiles needed accurate elevation models and quantity estimates — inputs that planning and billing decisions depend on directly.</p></div>
-            <div class="p-block"><h3>What I built</h3><p>Processed aerial survey data into DSMs, orthomosaics and contour maps for National Highway, railway and river-bed projects, and performed point-cloud-based volumetric estimation of coal stockpiles for thermal power plants.</p></div>
-            <div class="p-block"><h3>My role</h3><p>End-to-end: drone mission planning and execution through data processing to final deliverables.</p></div>
+        </article>
+        <article class="show-row">
+          <div class="show-visual">
+            <!-- IMAGE-SLOT pyqgis-qc: replace the <svg> below with  <img class="show-art" src="assets/projects/pyqgis-qc.webp" alt="PyQGIS QC Automation &mdash; Coimbatore City screenshot">  -->
+            <svg class="show-art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="presentation"><defs><pattern id="art-qc" width="57" height="50" patternUnits="userSpaceOnUse"><rect width="57" height="50" fill="none" stroke="var(--accent-ink)" stroke-width="1.4" opacity=".5"/></pattern></defs><rect width="400" height="300" fill="url(#art-qc)"/><rect x="57" y="50" width="57" height="50" fill="var(--flag)" opacity=".85"/><rect x="285" y="150" width="57" height="50" fill="var(--flag)" opacity=".85"/><rect x="171" y="200" width="57" height="50" fill="var(--accent)" opacity=".5"/><rect x="228" y="50" width="57" height="50" fill="var(--accent)" opacity=".3"/></svg>
           </div>
-        </details>
-
-        <details class="project">
-          <summary class="project-face">
-            <span class="p-head">
-              <span class="p-name">Industrial Park Site Suitability &amp; TEFR</span>
-              <span class="p-one">Multi-criteria spatial models and techno-economic feasibility inputs for proposed industrial parks.</span>
-            </span>
-            <span class="tags"><span class="tag">Spatial analysis</span><span class="tag">MCDM</span><span class="tag">QGIS</span></span>
-          </summary>
-          <div class="project-body">
-            <div class="p-block"><h3>The problem</h3><p>Selecting where to put an industrial park means balancing land use, terrain, infrastructure proximity and environmental constraints — with crores of investment riding on the answer.</p></div>
-            <div class="p-block"><h3>What I built</h3><p>Multi-criteria decision-making models integrating land-use, terrain and connectivity datasets into suitability maps, and geospatial inputs to techno-economic feasibility reports covering planning, investment viability and regulatory compliance.</p></div>
-            <div class="p-block"><h3>My role</h3><p>Spatial analysis lead — from raw datasets to the suitability maps and location intelligence used in executive decision-making.</p></div>
+          <div class="show-body">
+            <p class="show-metric">25% less manual QC</p>
+            <h3 class="show-name">PyQGIS QC Automation &mdash; Coimbatore City</h3>
+            <p class="show-desc">A PyQGIS automation that flags spatial mismatches between building footprints and geocode records across a citywide dataset for Coimbatore City Municipal Corporation, with custom in-QGIS shortcuts that streamlined the review. It cut manual quality-control workload by 25%.</p>
+            <div class="tags"><span class="tag">PyQGIS</span><span class="tag">Python</span><span class="tag">QGIS</span></div>
           </div>
-        </details>
-
-        <details class="project">
-          <summary class="project-face">
-            <span class="p-head">
-              <span class="p-name">Cadastral FMB Stitching at Scale</span>
-              <span class="p-one">Field Map Book stitching and land-parcel mapping for sites from 200 to 2,000 acres.</span>
-            </span>
-            <span class="tags"><span class="tag">AutoCAD</span><span class="tag">Cadastral</span><span class="tag">Survey data</span></span>
-          </summary>
-          <div class="project-body">
-            <div class="p-block"><h3>The problem</h3><p>Large infrastructure projects need legally-defensible parcel maps assembled from hundreds of individual Field Map Book records — where boundary errors translate into land-acquisition disputes.</p></div>
-            <div class="p-block"><h3>What I built</h3><p>End-to-end AutoCAD FMB stitching workflows producing seamless, high-accuracy cadastral maps across multiple project sites, preserving spatial accuracy and boundary integrity for legal documentation.</p></div>
-            <div class="p-block"><h3>My role</h3><p>Precision drafting and boundary QA across parcels ranging from 200 to 2,000 acres.</p></div>
+        </article>
+        <article class="show-row">
+          <div class="show-visual">
+            <!-- IMAGE-SLOT photogrammetry: replace the <svg> below with  <img class="show-art" src="assets/projects/photogrammetry.webp" alt="Photogrammetry &amp; Volumetric Estimation screenshot">  -->
+            <svg class="show-art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="presentation"><g fill="none" stroke="var(--accent-ink)" stroke-width="2.2" opacity=".8"><path d="M-10 252 C80 212 130 236 200 192 S330 122 410 132"/><path d="M-10 222 C80 180 140 206 205 160 S330 88 410 98"/><path d="M-10 192 C80 148 150 178 210 128 S330 54 410 64"/><path d="M-10 162 C90 120 160 148 214 98 S330 22 410 32"/></g><circle cx="214" cy="98" r="6" fill="var(--flag)"/></svg>
           </div>
-        </details>
+          <div class="show-body">
+            <p class="show-metric">Ortho &middot; DEM &middot; point cloud</p>
+            <h3 class="show-name">Photogrammetry &amp; Volumetric Estimation</h3>
+            <p class="show-desc">Processed aerial and drone-survey data into orthomosaics, DEMs, point clouds and contour maps for National Highway, railway and river-bed corridors &mdash; and ran point-cloud volumetric estimation of coal stockpiles for thermal power plants. End to end, from mission planning to final deliverables.</p>
+            <div class="tags"><span class="tag">Photogrammetry</span><span class="tag">Drone survey</span><span class="tag">Volumetrics</span></div>
+          </div>
+        </article>
+        <article class="show-row">
+          <div class="show-visual">
+            <!-- IMAGE-SLOT site-suitability: replace the <svg> below with  <img class="show-art" src="assets/projects/site-suitability.webp" alt="Industrial Park Site Suitability &amp; TEFR screenshot">  -->
+            <svg class="show-art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="presentation"><defs><radialGradient id="art-heat" cx="58%" cy="42%" r="62%"><stop offset="0%" stop-color="var(--flag)" stop-opacity=".9"/><stop offset="45%" stop-color="var(--accent)" stop-opacity=".6"/><stop offset="100%" stop-color="var(--accent)" stop-opacity=".06"/></radialGradient><pattern id="art-grid" width="50" height="50" patternUnits="userSpaceOnUse"><rect width="50" height="50" fill="none" stroke="var(--surface)" stroke-width="1.2" opacity=".5"/></pattern></defs><rect width="400" height="300" fill="url(#art-heat)"/><rect width="400" height="300" fill="url(#art-grid)"/></svg>
+          </div>
+          <div class="show-body">
+            <p class="show-metric">Multi-criteria siting</p>
+            <h3 class="show-name">Industrial Park Site Suitability &amp; TEFR</h3>
+            <p class="show-desc">Multi-criteria decision models that fused land-use, terrain and connectivity data into suitability maps, plus the geospatial inputs to techno-economic feasibility reports &mdash; the location intelligence that guided investment and regulatory decisions for proposed industrial parks.</p>
+            <div class="tags"><span class="tag">Spatial analysis</span><span class="tag">MCDM</span><span class="tag">QGIS</span></div>
+          </div>
+        </article>
+        <article class="show-row">
+          <div class="show-visual">
+            <!-- IMAGE-SLOT cadastral: replace the <svg> below with  <img class="show-art" src="assets/projects/cadastral.webp" alt="Cadastral FMB Stitching at Scale screenshot">  -->
+            <svg class="show-art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="presentation"><g fill="var(--accent-soft)" stroke="var(--accent-ink)" stroke-width="2.2"><polygon points="40,60 150,50 170,150 60,170"/><polygon points="150,50 270,64 260,150 170,150"/><polygon points="270,64 360,90 350,180 260,150"/><polygon points="60,170 170,150 180,250 80,258"/><polygon points="170,150 260,150 270,240 180,250"/></g></svg>
+          </div>
+          <div class="show-body">
+            <p class="show-metric">200&ndash;2,000 acre parcels</p>
+            <h3 class="show-name">Cadastral FMB Stitching at Scale</h3>
+            <p class="show-desc">End-to-end AutoCAD FMB stitching that assembles hundreds of Field Map Book records into seamless, legally-defensible cadastral maps &mdash; preserving boundary integrity for land acquisition across sites of 200 to 2,000 acres.</p>
+            <div class="tags"><span class="tag">AutoCAD</span><span class="tag">Cadastral</span><span class="tag">Survey data</span></div>
+          </div>
+        </article>
       </div>
     </section>
     <!-- /PROJECTS -->
@@ -322,7 +308,19 @@
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <p>Akash</p>
+    <p class="footer-lead">Let's build something that maps.</p>
+    <div class="footer-actions">
+      <a class="btn btn-primary" href="mailto:akashcivil04@gmail.com">Start a conversation</a>
+      <ul class="socials footer-socials" aria-label="Profiles">
+        <li><a href="https://github.com/Akash1803" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.87-1.38-3.87-1.38-.53-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.16-1.18 3.16-1.18.64 1.59.24 2.76.12 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.04.77 2.1v3.11c0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/akash-geospatial/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.22 8.09h4.56V23H.22V8.09Zm7.58 0h4.37v2.04h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.47 3.04 5.47 6.99V23h-4.55v-7.21c0-1.72-.03-3.93-2.4-3.93-2.4 0-2.77 1.87-2.77 3.8V23H7.8V8.09Z"/></svg></a></li>
+        <li><a href="mailto:akashcivil04@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7L22 7"/></svg></a></li>
+      </ul>
+    </div>
+    <div class="footer-base">
+      <span class="footer-name">Akash Saravanan · Web GIS Developer · Chennai</span>
+      <a class="footer-top" href="#top">Back to top ↑</a>
+    </div>
   </footer>
   <!-- /FOOTER -->
 </body>
