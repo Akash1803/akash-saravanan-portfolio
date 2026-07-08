@@ -10,7 +10,7 @@
   <meta property="og:description" content="GIS analysis, spatial data automation and web-based mapping platforms.">
   <meta name="theme-color" content="#F6F7F5">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=3">
   <script>
     // Theme boot: runs pre-paint so there is no flash of wrong theme.
     (function () {
@@ -21,7 +21,21 @@
       document.documentElement.setAttribute('data-theme', t);
     })();
   </script>
-  <script src="js/main.js" defer></script>
+  <script>
+    /* Progressive reveal: hide .reveal now, but never let a slow, cached, or broken
+       script leave the page blank — a failsafe reveals every section shortly after
+       load if the scroll observer never marked it ready. */
+    document.documentElement.classList.add('reveal-on');
+    window.addEventListener('DOMContentLoaded', function () {
+      setTimeout(function () {
+        if (!window.__revealReady) {
+          var els = document.querySelectorAll('.reveal');
+          for (var i = 0; i < els.length; i++) els[i].classList.add('in');
+        }
+      }, 1200);
+    });
+  </script>
+  <script src="js/main.js?v=3" defer></script>
   <noscript><style>.reveal{opacity:1;translate:none}</style></noscript>
 </head>
 <body>
@@ -80,7 +94,7 @@
           <p class="eyebrow">Chennai, India</p>
           <h1 class="hero-title">Akash Saravanan</h1>
           <p class="hero-role">Geospatial Analyst &amp; GIS Developer</p>
-          <p class="hero-sub">I turn spatial data and field surveys into decisions — and build the web platforms that put those maps in front of the people who make them.</p>
+          <p class="hero-sub">I build Web GIS platforms and automate spatial workflows with Python — turning raw geodata into maps people can actually make decisions with.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="#projects">View projects</a>
             <a class="btn btn-ghost" href="assets/resume.pdf" download>Download resume</a>
@@ -252,12 +266,16 @@
           <ul class="chips"><li class="chip">QGIS</li><li class="chip">ArcGIS Pro</li><li class="chip">Google Earth Engine</li><li class="chip">AutoCAD</li><li class="chip">ArcGIS Online</li></ul>
         </div>
         <div class="legend-group">
+          <h3>Spatial Analysis</h3>
+          <ul class="chips"><li class="chip">Spatial analysis</li><li class="chip">Geoprocessing</li><li class="chip">Cartography</li><li class="chip">Geodatabases</li><li class="chip">Coordinate systems</li><li class="chip">Data QA / QC</li></ul>
+        </div>
+        <div class="legend-group">
           <h3>Python &amp; Automation</h3>
-          <ul class="chips"><li class="chip">Python</li><li class="chip">PyQGIS</li><li class="chip">GeoPandas</li><li class="chip">GDAL / Rasterio</li></ul>
+          <ul class="chips"><li class="chip">Python</li><li class="chip">PyQGIS</li><li class="chip">GeoPandas</li><li class="chip">Shapely</li><li class="chip">GDAL / Rasterio</li><li class="chip">NumPy</li></ul>
         </div>
         <div class="legend-group">
           <h3>Web GIS</h3>
-          <ul class="chips"><li class="chip">React</li><li class="chip">Leaflet</li><li class="chip">JavaScript</li><li class="chip">PostGIS</li><li class="chip">REST APIs</li></ul>
+          <ul class="chips"><li class="chip">React</li><li class="chip">Leaflet</li><li class="chip">JavaScript</li><li class="chip">GeoJSON</li><li class="chip">PostGIS</li><li class="chip">REST APIs</li></ul>
         </div>
         <div class="legend-group">
           <h3>Field &amp; Survey</h3>
