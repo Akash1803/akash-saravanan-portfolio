@@ -58,3 +58,36 @@ const spyObserver = new IntersectionObserver((entries) => {
   });
 }, { rootMargin: '-40% 0px -55% 0px' });
 document.querySelectorAll('main section[id]').forEach((s) => spyObserver.observe(s));
+
+// ---- Contact form (posts to Web3Forms; no backend needed) ----
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const status = document.getElementById('formStatus');
+    const btn = contactForm.querySelector('button[type="submit"]');
+    status.style.color = 'var(--accent-ink)';
+    status.textContent = 'Sending…';
+    if (btn) btn.disabled = true;
+    fetch(contactForm.action, {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: new FormData(contactForm)
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        if (data.success) {
+          status.textContent = "Thanks — your message is on its way. I'll get back to you soon.";
+          contactForm.reset();
+        } else {
+          status.style.color = 'var(--flag)';
+          status.textContent = 'Something went wrong. Please email me directly at akashcivil04@gmail.com.';
+        }
+      })
+      .catch(() => {
+        status.style.color = 'var(--flag)';
+        status.textContent = 'Network error. Please email me directly at akashcivil04@gmail.com.';
+      })
+      .finally(() => { if (btn) btn.disabled = false; });
+  });
+}

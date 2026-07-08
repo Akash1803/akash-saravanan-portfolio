@@ -353,4 +353,19 @@ a:hover { color: var(--accent); }
 .footer-top:hover { color: var(--accent-ink); }
 @media (max-width: 560px) { .footer-base { justify-content: center; text-align: center; } }
 
+/* ============ Contact form ============ */
+.contact-form { display: grid; gap: 1rem; max-width: 34rem; margin: 1.6rem auto .5rem; text-align: left; }
+.contact-form .hp { position: absolute; left: -9999px; opacity: 0; }
+.field { display: grid; gap: .35rem; }
+.field label { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.field input, .field textarea {
+  font-family: var(--font-body); font-size: 1rem; color: var(--ink); width: 100%;
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-s); padding: .7rem .85rem;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.field textarea { resize: vertical; min-height: 120px; }
+.contact-form .btn-primary { justify-self: center; }
+.form-status { margin: .2rem 0 0; font-size: .92rem; color: var(--accent-ink); min-height: 1.2em; text-align: center; }
+
 /* ============ No-JS fallback (keep last) ============ */
