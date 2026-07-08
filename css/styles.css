@@ -28,18 +28,18 @@
   color-scheme: light;
 }
 [data-theme="dark"] {
-  --paper: #0F1714;
-  --surface: #161F1B;
-  --ink: #E7EDEA;
-  --muted: #93A29B;
-  --line: #243029;
-  --contour: #1A241F;
-  --accent: #57B99D;
-  --accent-ink: #79CDB6;
-  --accent-soft: rgba(87, 185, 157, 0.10);
+  --paper: #18221E;
+  --surface: #212C27;
+  --ink: #DAE3DF;
+  --muted: #95A49D;
+  --line: #2C3832;
+  --contour: #222C27;
+  --accent: #5FBEA2;
+  --accent-ink: #83D0BB;
+  --accent-soft: rgba(95, 190, 162, 0.10);
   --flag: #D8925B;
-  --shadow-1: 0 1px 2px rgba(0,0,0,.35), 0 4px 16px rgba(0,0,0,.35);
-  --shadow-2: 0 2px 4px rgba(0,0,0,.4), 0 14px 36px rgba(0,0,0,.5);
+  --shadow-1: 0 1px 2px rgba(0,0,0,.28), 0 4px 16px rgba(0,0,0,.30);
+  --shadow-2: 0 2px 4px rgba(0,0,0,.32), 0 14px 36px rgba(0,0,0,.42);
   --on-accent: #0F1714;
   color-scheme: dark;
 }
@@ -47,12 +47,12 @@
    so this only fires when JS is off and the OS prefers dark. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]):not([data-theme="dark"]) {
-    --paper: #0F1714; --surface: #161F1B; --ink: #E7EDEA; --muted: #93A29B;
-    --line: #243029; --contour: #1A241F;
-    --accent: #57B99D; --accent-ink: #79CDB6; --accent-soft: rgba(87,185,157,.10);
+    --paper: #18221E; --surface: #212C27; --ink: #DAE3DF; --muted: #95A49D;
+    --line: #2C3832; --contour: #222C27;
+    --accent: #5FBEA2; --accent-ink: #83D0BB; --accent-soft: rgba(95,190,162,.10);
     --flag: #D8925B;
-    --shadow-1: 0 1px 2px rgba(0,0,0,.35), 0 4px 16px rgba(0,0,0,.35);
-    --shadow-2: 0 2px 4px rgba(0,0,0,.4), 0 14px 36px rgba(0,0,0,.5);
+    --shadow-1: 0 1px 2px rgba(0,0,0,.28), 0 4px 16px rgba(0,0,0,.30);
+    --shadow-2: 0 2px 4px rgba(0,0,0,.32), 0 14px 36px rgba(0,0,0,.42);
     --on-accent: #0F1714;
     color-scheme: dark;
   }
@@ -191,7 +191,6 @@ a:hover { color: var(--accent); }
 .hero-inner {
   max-width: var(--w-max); margin: 0 auto;
   padding: clamp(4.5rem, 12vh, 8rem) 1.5rem clamp(3rem, 8vh, 5rem);
-  display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: center;
   position: relative;
 }
 .hero-title {
@@ -225,25 +224,7 @@ a:hover { color: var(--accent); }
 }
 .socials a:hover { color: var(--accent-ink); background: var(--accent-soft); }
 
-/* Survey plate */
-.plate {
-  border: 1px solid var(--line); border-radius: var(--r-m);
-  background: color-mix(in srgb, var(--surface) 82%, transparent);
-  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
-  box-shadow: var(--shadow-1);
-  padding: 1.5rem 1.75rem; text-align: center; color: var(--accent-ink);
-  display: grid; gap: .45rem; justify-items: center;
-}
-.plate-line { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .18em; color: var(--muted); margin: 0; }
-.plate-coord { font-family: var(--font-mono); font-size: .85rem; font-weight: 500; margin: 0; }
-.plate-scale { display: flex; height: 6px; width: 120px; border: 1px solid var(--accent-ink); }
-.plate-scale span { flex: 1; }
-.plate-scale span:nth-child(odd) { background: var(--accent-ink); }
-
-@media (max-width: 860px) {
-  .hero-inner { grid-template-columns: 1fr; }
-  .plate { display: none; }
-}
+/* (survey plate removed — hero leads with the name) */
 
 /* ============ About ============ */
 .about-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 3rem; align-items: start; }
@@ -356,10 +337,9 @@ a:hover { color: var(--accent); }
 .contact-alt { color: var(--muted); margin: 0; }
 .footer {
   max-width: var(--w-max); margin: 0 auto; padding: 3rem 1.5rem 2rem;
-  display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;
   color: var(--muted); font-size: .9rem;
 }
 .footer p { margin: 0; }
-.footer-mono { font-family: var(--font-mono); font-size: .8rem; }
 
 /* ============ No-JS fallback (keep last) ============ */

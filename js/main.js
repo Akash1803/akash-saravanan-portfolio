@@ -22,8 +22,9 @@ navLinks.addEventListener('click', (e) => {
   }
 });
 
-// ---- Footer year ----
-document.getElementById('year').textContent = new Date().getFullYear();
+// ---- Footer year (only if a #year span is present) ----
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // ---- Scroll reveal ----
 const revealObserver = new IntersectionObserver((entries) => {
