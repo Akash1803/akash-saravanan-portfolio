@@ -76,7 +76,7 @@ if (contactForm) {
     })
       .then((r) => r.json())
       .then((data) => {
-        if (data.success) {
+        if (data.success === true || String(data.success) === 'true') {
           status.textContent = "Thanks — your message is on its way. I'll get back to you soon.";
           contactForm.reset();
         } else {
