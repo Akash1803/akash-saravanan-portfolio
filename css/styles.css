@@ -313,6 +313,8 @@ a:hover { color: var(--accent); }
   padding: .22rem .55rem; border-radius: 999px; background: var(--accent-soft); color: var(--accent-ink);
 }
 .show-row:nth-child(even) .show-visual { order: 2; border-right: none; border-left: 1px solid var(--line); }
+.show-row.featured { grid-template-columns: 1fr; }
+.show-row.featured .show-visual { order: -1; aspect-ratio: 1279 / 505; min-height: 0; border-right: none; border-left: none; border-bottom: 1px solid var(--line); }
 @media (max-width: 720px) {
   .show-row { grid-template-columns: 1fr; }
   .show-visual { min-height: 170px; border-right: none; border-bottom: 1px solid var(--line); }
