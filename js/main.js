@@ -91,3 +91,15 @@ if (contactForm) {
       .finally(() => { if (btn) btn.disabled = false; });
   });
 }
+
+// ---- Hero photo: show the monogram if the image is missing ----
+const heroImg = document.querySelector('.hero-photo img');
+if (heroImg) {
+  const showMonogram = () => {
+    heroImg.style.display = 'none';
+    const mono = document.querySelector('.hero-monogram');
+    if (mono) mono.style.display = 'grid';
+  };
+  heroImg.addEventListener('error', showMonogram);
+  if (heroImg.complete && heroImg.naturalWidth === 0) showMonogram();
+}
