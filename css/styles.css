@@ -297,8 +297,9 @@ a:hover { color: var(--accent); }
   .show-row { grid-template-columns: 1fr; }
   .show-visual { min-height: 170px; border-right: none; border-bottom: 1px solid var(--line); }
   .show-row:nth-child(even) .show-visual { order: 0; border-left: none; }
-  .show-row.featured .show-visual { aspect-ratio: 16 / 9; }
-  .show-row.featured .show-visual img { position: absolute; height: 100%; object-position: center; }
+  /* 16:9 box via padding so it holds up in browsers without aspect-ratio support (older in-app WebViews) */
+  .show-row.featured .show-visual { height: 0; padding-top: 56.25%; }
+  .show-row.featured .show-visual img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-position: center; }
 }
 @media (max-width: 600px) {
   .show-blocks { grid-template-columns: 1fr; gap: .9rem; }
