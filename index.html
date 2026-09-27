@@ -116,8 +116,8 @@
       </div>
       <div class="about-grid">
         <div class="about-text">
-          <p>I came to maps from the ground up — literally. I started as a civil engineer supervising construction sites, moved into GIS analysis, and spent four years turning survey data and drone mapping into answers: where to build an industrial park, how much coal sits in a stockpile, which land parcels don't match their tax records.</p>
-          <p>These days I also build the software side — web-based GIS platforms with React and Leaflet on the front and Python behind them, plus PyQGIS automation that removes the manual grind from spatial QC. I like the whole pipeline: from raw survey data to a map someone can actually make a decision with.</p>
+          <p>I came to maps from the ground up — literally. I started as a civil engineer supervising construction sites, moved into GIS analysis, and spent nearly four years turning survey data and drone mapping into answers: where to build an industrial park, how much coal sits in a stockpile, which land parcels don't match their tax records.</p>
+          <p>These days I also ship the software side — using AI-assisted development (Claude, ChatGPT) to build web-based GIS platforms end to end, plus PyQGIS automation that removes the manual grind from spatial QC. I like the whole pipeline: from raw survey data to a map someone can actually make a decision with.</p>
         </div>
         <dl class="facts">
           <div class="fact"><dt>Location</dt><dd>Chennai, India</dd></div>
@@ -141,10 +141,10 @@
           <h3 class="t-role">Geospatial Engineer</h3>
           <p class="t-org">FarmwiseAI · Chennai</p>
           <ul class="t-points">
-            <li>Building a web-based GIS platform for a government transport authority — React/Leaflet map interface over a Python backend, used by planners to review land-parcel layouts, with a DWG/DXF-to-web ingestion pipeline and 6,000+ interactive features per view.</li>
-            <li>Contributing to the FaaS FPO portal &mdash; a map-first cockpit for Farmer Producer Organisations &mdash; building map interactions and the land-document retrieval workflows (Patta/Chitta, A-Register) that feed cadastral data into the farmer database.</li>
+            <li>Built the CUMTA (Chennai Unified Metropolitan Transport Authority) Web GIS platform end to end using AI-assisted development (Claude, ChatGPT) — a React/Leaflet map viewer, a FastAPI backend with role-based access, and a CAD pipeline that converts DWG/DXF layouts into georeferenced GIS data for 30+ CMDA layout projects.</li>
+            <li>Contributing to the FPO Portal &mdash; a map-first cockpit for Farmer Producer Organisations &mdash; building map interactions and the land-document retrieval workflows (Patta/Chitta, A-Register) that feed cadastral data into the farmer database.</li>
             <li>Conducting techno-economic feasibility studies (TEFR) and multi-criteria site-suitability models for proposed industrial parks — land potential, connectivity, and investment viability.</li>
-            <li>Executing end-to-end AutoCAD FMB stitching, turning raw survey records into high-accuracy industrial layouts, and leading QGIS-based QA/QC for property-tax geospatial projects with 100% data-integrity targets.</li>
+            <li>Executing end-to-end AutoCAD FMB stitching (700+ parcels stitched, 5,000+ acres mapped), turning raw survey records into high-accuracy industrial layouts, and leading QGIS-based QA/QC for property-tax geospatial projects with 100% data-integrity targets.</li>
             <li>Automating daily GIS workflows with Python and applying GeoAI models for predictive land-use analysis and automated feature extraction.</li>
           </ul>
         </li>
@@ -154,8 +154,8 @@
           <p class="t-org">Operational Energy Group India · Chennai</p>
           <ul class="t-points">
             <li>Worked in the mapping industry, turning raw field and drone-survey data into decision-ready deliverables — orthomosaics, digital elevation models (DEMs), point clouds and contour maps — across three group companies (OEG, OEG Defence &amp; Aerospace, Zuppa GEN5).</li>
-            <li>Converted that processed data into answers: volumetric analysis for coal stockpiles, topographic mapping for thermal power plants, and ArcGIS Online dashboards that put results in front of decision-makers.</li>
-            <li>Ran drone survey missions end to end — mission planning, geotagging and photogrammetric processing — and delivered GIS datasets, geodatabases and topographic maps for engineering and defence projects.</li>
+            <li>Converted that processed data into answers: volumetric analysis for coal stockpiles, topographic mapping for thermal power plants, and ArcGIS Online and Field Maps for field data collection and visualization.</li>
+            <li>Processed drone-captured imagery into georeferenced orthomosaics and elevation models, delivered GIS datasets and topographic maps for engineering and defence projects, and gave mapping demonstrations at client meetings.</li>
           </ul>
         </li>
         <li class="t-item">
@@ -181,31 +181,36 @@
           <div class="show-visual">
             <picture>
               <source srcset="assets/projects/webgis.webp" type="image/webp">
-              <img class="show-art" src="assets/projects/webgis.png?v=1" alt="Government WebGIS platform — dashboard with plot, area and road stats, a layers panel, and an interactive cadastral parcel map over satellite imagery" width="1279" height="505" decoding="async">
+              <img class="show-art" src="assets/projects/webgis.png?v=1" alt="CUMTA Web GIS platform — dashboard with plot, area and road stats, a layers panel, and an interactive cadastral parcel map over satellite imagery" width="1279" height="505" decoding="async">
             </picture>
           </div>
           <div class="show-body">
-            <p class="show-metric">6,000+ interactive features</p>
-            <h3 class="show-name">Government WebGIS Platform</h3>
-            <p class="show-desc">A single-view web platform that replaced paper and desktop CAD for a metropolitan transport authority. I built the React/Leaflet map interface, the Python backend, and a DWG/DXF-to-web ingestion pipeline &mdash; keeping 6,000+ plot features interactive with measurement, side-by-side comparison and a locked-down stakeholder review mode.</p>
-            <div class="tags"><span class="tag">React</span><span class="tag">Leaflet</span><span class="tag">Python</span><span class="tag">PostGIS</span></div>
-            <p class="show-note">Government client &mdash; sanitized preview; code and live site are private.</p>
+            <p class="show-metric">30+ CMDA layout projects</p>
+            <h3 class="show-name">CUMTA Web GIS Platform</h3>
+            <p class="show-desc">A full-stack Web GIS platform I built with AI-assisted development (Claude, ChatGPT) for the Chennai Unified Metropolitan Transport Authority (CUMTA) to manage CMDA layout data across 30+ layout projects: upload a layout drawing, see it georeferenced on the map, analyse its roads and export registers and reports.</p>
+            <div class="show-blocks">
+              <div class="show-block"><h4>Problem</h4><p>Approved layout drawings lived as CAD and PDF files, with no central, georeferenced view where planners could check road connectivity, width compliance or how a layout sits on the ground.</p></div>
+              <div class="show-block"><h4>What I built</h4><p>A React/Leaflet viewer with measurement and side-by-side review; a FastAPI backend with JWT role-based access; a CAD pipeline (ezdxf, ODA File Converter) that turns DWG/DXF into georeferenced GeoJSON with GCP correction and version rollback; and a road register with connectivity and width-compliance checks and Shapefile, KML, Excel and PDF exports.</p></div>
+              <div class="show-block"><h4>Engineering</h4><p>Sole developer across 196 commits, working with Claude and ChatGPT, with 250+ automated tests (Vitest and pytest) running in CI on every push, and a dual SQLite / PostGIS data layer that runs on a laptop and scales to production.</p></div>
+            </div>
+            <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Leaflet</span><span class="tag">FastAPI</span><span class="tag">PostGIS</span><span class="tag">ezdxf</span></div>
+            <p class="show-note">Proof of concept for CUMTA &mdash; code and live site are private; screenshot shows a sample layout.</p>
           </div>
         </article>
         <article class="show-row featured">
           <div class="show-visual">
             <picture>
               <source srcset="assets/projects/faas-fpo.webp" type="image/webp">
-              <img class="show-art" src="assets/projects/faas-fpo.jpg" alt="FaaS FPO Portal &mdash; the Thalaivasal FPC overview: a members-by-crop chart and coverage stats beside a satellite map of member villages around Salem, Tamil Nadu" width="1600" height="756" decoding="async">
+              <img class="show-art" src="assets/projects/faas-fpo.jpg" alt="FPO Portal &mdash; the Thalaivasal FPC overview: a members-by-crop chart and coverage stats beside a satellite map of member villages around Salem, Tamil Nadu" width="1600" height="756" decoding="async">
             </picture>
           </div>
           <div class="show-body">
             <p class="show-metric">323 farmers &middot; Salem, Tamil Nadu</p>
-            <h3 class="show-name">FaaS FPO Portal &mdash; Map-first Cockpit</h3>
+            <h3 class="show-name">FPO Portal &mdash; Map-first Cockpit</h3>
             <p class="show-desc">A management cockpit for Farmer Producer Organisations where a survey-level land map and a live MIS dashboard work as one instrument: filter, drill into a village or click a parcel, and both sides update together.</p>
             <div class="show-blocks">
               <div class="show-block"><h4>Problem</h4><p>An FPO&rsquo;s land, members and government data normally live in separate tools &mdash; parcel maps in one place, member records and scheme data in another &mdash; so nothing lines up when decisions are made.</p></div>
-              <div class="show-block"><h4>What I built</h4><p>The village-drill, parcel-selection and machinery-rental experiences on a MapLibre map with statewide PMTiles layers; integration of real government data &mdash; land parcels, soil-health cards and fertilizer dealer stock; and the land-document retrieval workflows (Patta/Chitta, A-Register) that feed accurate cadastral data into the farmer database.</p></div>
+              <div class="show-block"><h4>What I built</h4><p>The village-drill and parcel-selection experiences on a MapLibre map with statewide PMTiles layers; integration of real government data &mdash; land parcels, soil-health cards and fertilizer dealer stock; and the land-document retrieval workflows (Patta/Chitta, A-Register) that feed accurate cadastral data into the farmer database.</p></div>
               <div class="show-block"><h4>My role</h4><p>Frontend and geospatial developer on a small team &mdash; map interactions, filter wiring and the cadastral data pipeline, on a FastAPI + PostgreSQL backend, for an FPO of 323 farmers across 10 villages in Salem, Tamil Nadu.</p></div>
             </div>
             <div class="tags"><span class="tag">MapLibre GL</span><span class="tag">PMTiles</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Cadastral data</span></div>
@@ -237,10 +242,10 @@
             <p class="show-desc">Aerial and drone-survey data processed into orthomosaics, DEMs, point clouds and contour maps for National Highway, railway and river-bed corridors, plus point-cloud volumetrics of coal stockpiles for thermal power plants.</p>
             <div class="show-blocks">
               <div class="show-block"><h4>Problem</h4><p>Infrastructure corridors and resource stockpiles needed accurate elevation models and quantity estimates &mdash; inputs that planning and billing decisions depend on directly.</p></div>
-              <div class="show-block"><h4>Process</h4><p>Mission planning and geotagging through photogrammetric processing to DSM/DEM generation, orthomosaic and contour production, and point-cloud volume calculation &mdash; delivered as GIS datasets, geodatabases and topographic maps.</p></div>
-              <div class="show-block"><h4>My role</h4><p>End to end: drone mission planning and execution, data processing, and final deliverables for engineering and defence projects.</p></div>
+              <div class="show-block"><h4>Process</h4><p>Photogrammetric processing of aerial and drone survey data into DSMs/DEMs, orthomosaics and contour maps, then point-cloud volume calculation &mdash; delivered as GIS datasets, geodatabases and topographic maps.</p></div>
+              <div class="show-block"><h4>My role</h4><p>Data processing and final deliverables: photogrammetric processing, QA/QC of elevation and map outputs, and volumetric results for engineering and client review.</p></div>
             </div>
-            <div class="tags"><span class="tag">Photogrammetry</span><span class="tag">Drone survey</span><span class="tag">DEM / DSM</span><span class="tag">Volumetrics</span></div>
+            <div class="tags"><span class="tag">Photogrammetry</span><span class="tag">UAV data processing</span><span class="tag">DEM / DSM</span><span class="tag">Volumetrics</span></div>
           </div>
         </article>
         <article class="show-row text-only">
@@ -264,13 +269,13 @@
                <div class="show-visual"><img class="show-art" src="assets/projects/cadastral.webp" alt="Cadastral FMB Stitching at Scale screenshot"></div>
                as the first child of this article and change the class "text-only" to "featured". -->
           <div class="show-body">
-            <p class="show-metric">200&ndash;2,000 acre parcels</p>
+            <p class="show-metric">700+ parcels &middot; 5,000+ acres</p>
             <h3 class="show-name">Cadastral FMB Stitching at Scale</h3>
             <p class="show-desc">End-to-end AutoCAD FMB stitching that assembles hundreds of Field Map Book records into seamless, legally-defensible cadastral maps for land acquisition.</p>
             <div class="show-blocks">
               <div class="show-block"><h4>Problem</h4><p>Large infrastructure projects need legally-defensible parcel maps assembled from hundreds of individual Field Map Book records &mdash; where boundary errors translate into land-acquisition disputes.</p></div>
               <div class="show-block"><h4>What I built</h4><p>AutoCAD FMB stitching workflows producing seamless, high-accuracy cadastral maps across multiple project sites, preserving spatial accuracy and boundary integrity for legal documentation.</p></div>
-              <div class="show-block"><h4>My role</h4><p>Precision drafting and boundary QA across parcels ranging from 200 to 2,000 acres.</p></div>
+              <div class="show-block"><h4>My role</h4><p>Precision drafting and boundary QA across 700+ parcels and 5,000+ acres, on sites ranging from 200 to 2,000 acres.</p></div>
             </div>
             <div class="tags"><span class="tag">AutoCAD</span><span class="tag">Cadastral</span><span class="tag">Survey data</span><span class="tag">Land acquisition</span></div>
           </div>
@@ -286,17 +291,34 @@
       </div>
       <div class="legend">
         <div class="legend-group">
-          <h3>Web GIS</h3>
-          <ul class="chips"><li class="chip">React</li><li class="chip">Leaflet</li><li class="chip">JavaScript</li><li class="chip">PostGIS</li><li class="chip">REST APIs</li></ul>
+          <h3>GIS &amp; Mapping Tools</h3>
+          <ul class="chips"><li class="chip">ArcGIS Pro</li><li class="chip">ArcGIS Online</li><li class="chip">Field Maps</li><li class="chip">QGIS</li><li class="chip">Google Earth Engine</li><li class="chip">AutoCAD Map 3D</li><li class="chip">Google Earth Pro</li><li class="chip">Global Mapper</li></ul>
         </div>
         <div class="legend-group">
-          <h3>Python &amp; Automation</h3>
-          <ul class="chips"><li class="chip">Python</li><li class="chip">PyQGIS</li><li class="chip">GeoPandas</li><li class="chip">GDAL</li></ul>
+          <h3>Data &amp; Geodatabase Management</h3>
+          <ul class="chips"><li class="chip">Geodatabase structuring</li><li class="chip">Metadata documentation</li><li class="chip">Folder structure &amp; naming conventions</li><li class="chip">Version control</li><li class="chip">Vector / raster conversion</li><li class="chip">Georeferencing</li><li class="chip">Geoprocessing</li></ul>
         </div>
         <div class="legend-group">
-          <h3>GIS &amp; Mapping</h3>
-          <ul class="chips"><li class="chip">QGIS</li><li class="chip">ArcGIS Pro</li><li class="chip">Spatial analysis</li><li class="chip">Orthomosaic / DEM / Point cloud</li></ul>
+          <h3>BIM &ndash; GIS Integration</h3>
+          <ul class="chips"><li class="chip">GIS data with CAD &amp; BIM drawings</li><li class="chip">Civil engineering domain knowledge</li></ul>
         </div>
+        <div class="legend-group">
+          <h3>Development &amp; Automation</h3>
+          <ul class="chips"><li class="chip">Python</li><li class="chip">GDAL</li><li class="chip">Rasterio</li><li class="chip">GeoPandas</li><li class="chip">Shapely</li><li class="chip">PyQGIS</li><li class="chip">ModelBuilder</li><li class="chip">FME</li><li class="chip">PostGIS</li><li class="chip">SQL</li></ul>
+        </div>
+        <div class="legend-group">
+          <h3>Drone Data Processing</h3>
+          <ul class="chips"><li class="chip">Pix4Dmapper</li><li class="chip">Agisoft Metashape</li><li class="chip">RealityCapture</li><li class="chip">DJI Terra</li></ul>
+        </div>
+        <div class="legend-group">
+          <h3>Spatial Analysis &amp; Cartography</h3>
+          <ul class="chips"><li class="chip">Multi-criteria spatial analysis</li><li class="chip">Cartographic map production</li><li class="chip">Symbology &amp; layout design</li></ul>
+        </div>
+        <div class="legend-group">
+          <h3>Productivity</h3>
+          <ul class="chips"><li class="chip">Microsoft 365 (Excel, PowerPoint, Word)</li></ul>
+        </div>
+      </div>
       </div>
     </section>
     <!-- /SKILLS -->
@@ -322,7 +344,7 @@
       </div>
       <div class="legend-group certs">
         <h3>Certifications</h3>
-        <ul class="chips"><li class="chip">Advanced GIS &amp; Remote Sensing (ArcGIS Pro, QGIS)</li><li class="chip">AutoCAD Certification</li></ul>
+        <ul class="chips"><li class="chip">Advanced GIS &amp; Remote Sensing (ArcGIS Pro, QGIS)</li><li class="chip">AutoCAD Certification</li><li class="chip">AI/ML for Geodata Analysis &mdash; IIRS, ISRO (2024)</li><li class="chip">Essentials for PyQGIS &mdash; Udemy (2025)</li><li class="chip">Drone Photogrammetric Image Processing &mdash; Udemy (2024)</li><li class="chip">GIS Basics &mdash; Esri (2023)</li><li class="chip">ArcGIS Pro Essential Training &mdash; LinkedIn Learning (2023)</li></ul>
       </div>
     </section>
     <!-- /EDUCATION -->
