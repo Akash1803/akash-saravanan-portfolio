@@ -101,7 +101,7 @@
           </ul>
           <div class="cta-row">
             <a class="btn btn-primary" href="#projects">View projects</a>
-            <a class="btn btn-ghost" href="assets/resume.pdf?v=6" download="Akash-Saravanan-CV.pdf">Download resume</a>
+            <a class="btn btn-ghost" href="assets/resume.pdf?v=7" download="Akash-Saravanan-CV.pdf">Download resume</a>
           </div>
           <ul class="socials" aria-label="Profiles">
             <li><a href="https://github.com/Akash1803" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2.17c-3.2.7-3.87-1.38-3.87-1.38-.53-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.16-1.18 3.16-1.18.64 1.59.24 2.76.12 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.04.77 2.1v3.11c0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg></a></li>
@@ -239,6 +239,19 @@
           </div>
         </article>
         <article class="show-row text-only">
+          <div class="show-body">
+            <p class="show-metric">7 of 11 verified in pilot &middot; open source</p>
+            <h3 class="show-name">Property-Tax Street Audit &mdash; Coimbatore City (Proof of Concept)</h3>
+            <p class="show-desc">A Python tool that checks property-tax building records against street-level imagery: it finds the panoramas that can really see each building, marks the target on the image, and has a vision LLM read what is there &mdash; while fixed rules, not the LLM, decide whether the building is verified.</p>
+            <div class="show-blocks">
+              <div class="show-block"><h4>Problem</h4><p>Sending a street image to an LLM by coordinates shows the wrong building: the nearest panorama is somewhere else, the nearest road is often the lane behind, and &ldquo;classify this building&rdquo; never says which building in the frame.</p></div>
+              <div class="show-block"><h4>What I built</h4><p>Line-of-sight view selection against building footprints (up to four views per building), images requested by panorama ID and marked with the target&rsquo;s span, a blind vision-LLM reading of floors, usage and shop fronts asked twice, rule-based verdicts compared with the field survey and tax record, and QGIS layers plus per-building evidence pages for team review. 54 unit tests.</p></div>
+              <div class="show-block"><h4>Result</h4><p>On the Ward 44 pilot rerun, 7 of 11 building parts were verified automatically and every doubtful case went to Unsure for human review. Owner details are never sent to the image source or the LLM. Code is public: <a href="https://github.com/Akash1803/PropertyTax_StreetAudit" target="_blank" rel="noopener noreferrer">github.com/Akash1803/PropertyTax_StreetAudit</a>.</p></div>
+            </div>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Vision LLM (Gemini)</span><span class="tag">Street-level imagery</span><span class="tag">Shapely</span><span class="tag">GeoPackage</span><span class="tag">QGIS</span></div>
+          </div>
+        </article>
+        <article class="show-row text-only">
           <!-- IMAGE-SLOT pyqgis-qc: when the screenshot arrives, add
                <div class="show-visual"><img class="show-art" src="assets/projects/pyqgis-qc.webp" alt="PyQGIS QC Automation — Coimbatore City screenshot"></div>
                as the first child of this article and change the class "text-only" to "featured". -->
@@ -330,7 +343,7 @@
         </div>
         <div class="legend-group">
           <h3>Development &amp; Automation</h3>
-          <ul class="chips"><li class="chip">Python</li><li class="chip">GDAL</li><li class="chip">Rasterio</li><li class="chip">GeoPandas</li><li class="chip">Shapely</li><li class="chip">PyQGIS</li><li class="chip">ModelBuilder</li><li class="chip">FME</li><li class="chip">PostGIS</li><li class="chip">SQL</li><li class="chip">JavaScript (React, Leaflet, MapLibre GL)</li></ul>
+          <ul class="chips"><li class="chip">Python</li><li class="chip">GDAL</li><li class="chip">Rasterio</li><li class="chip">GeoPandas</li><li class="chip">Shapely</li><li class="chip">PyQGIS</li><li class="chip">ModelBuilder</li><li class="chip">FME</li><li class="chip">PostGIS</li><li class="chip">SQL</li><li class="chip">JavaScript (React, Leaflet, MapLibre GL)</li><li class="chip">LLM APIs (Gemini)</li></ul>
         </div>
         <div class="legend-group">
           <h3>Drone Data Processing</h3>
@@ -401,7 +414,7 @@
           <button class="btn btn-primary" type="submit">Send message</button>
           <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
-        <p class="contact-alt">Prefer email? <a href="mailto:akashcivil04@gmail.com">akashcivil04@gmail.com</a> &middot; <a href="assets/resume.pdf?v=6" download="Akash-Saravanan-CV.pdf">Download resume</a> &middot; <a href="https://www.linkedin.com/in/akash-geospatial/" target="_blank" rel="noopener noreferrer">LinkedIn</a> &middot; <a href="https://github.com/Akash1803" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        <p class="contact-alt">Prefer email? <a href="mailto:akashcivil04@gmail.com">akashcivil04@gmail.com</a> &middot; <a href="assets/resume.pdf?v=7" download="Akash-Saravanan-CV.pdf">Download resume</a> &middot; <a href="https://www.linkedin.com/in/akash-geospatial/" target="_blank" rel="noopener noreferrer">LinkedIn</a> &middot; <a href="https://github.com/Akash1803" target="_blank" rel="noopener noreferrer">GitHub</a></p>
       </div>
     </section>
     <!-- /CONTACT -->
